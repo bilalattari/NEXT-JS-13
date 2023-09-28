@@ -1,4 +1,5 @@
 'use client'
+import Navbar from '@/components/Navbar'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
@@ -10,8 +11,12 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center  p-24">
+    <main className="flex min-h-screen flex-col   ">
+      <Navbar />
+      
       <h1>Hello Next Js</h1>
+
+      
       <div className='flex'>
 
         <Link href={'/dog'}>
@@ -24,10 +29,10 @@ export default function Home() {
             Contact
           </div>
         </Link>
-        <div onClick={() => router.push('/about')} className='p-2 px-4  m-3 bg-red-200 rounded-md'>
+        <div onClick={() => router.push('/about')} className='p-2 px-4 cursor-pointer m-3 bg-red-200 rounded-md'>
           About
         </div>
-        <div onClick={handleOnClickBlog} className='p-2 px-4  m-3 bg-red-200 rounded-md'>
+        <div onClick={handleOnClickBlog} className='p-2 px-4 cursor-pointer  m-3 bg-red-200 rounded-md'>
           Users
         </div>
       </div>

@@ -1,4 +1,6 @@
+import AuthProvider from '@/context/AuthContext'
 import './globals.css'
+import ThemeProvider from '@/context/ThemeContext'
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,8 +10,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body >
-        {children}</body>
+      <body>
+        <ThemeProvider>
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </ThemeProvider>
+
+      </body>
     </html>
   )
 }

@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import getUsers from '../lib/getUsers'
+
 export default async function Blogs() {
+   
     const users = await getUsers()
+   
     return (
         <main className="flex min-h-screen flex-col  justify-between p-24">
             <h1 className='text-center font-bold text-3xl'>Users</h1>
